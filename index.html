@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#06162F" />
+  <meta name="description" content="SAY YOURS — Say your sentence NOW!!!" />
+  <title>SAY YOURS — Say your sentence NOW!!!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+    <section class="screen active" id="home">
+      <header class="topbar">
+        <div class="brand">SAY YOURS</div>
+        <button class="ghost-link" data-go="write">SAY YOURS</button>
+      </header>
+
+      <div class="home-wrap">
+        <p class="eyebrow">Say your sentence NOW!!!</p>
+
+        <article class="sentence-card">
+          <div class="quote-mark">“</div>
+          <p class="hero-sentence" id="homeSentence">
+            Life gets interesting when you stop waiting for permission.
+          </p>
+          <div class="sentence-meta">
+            <span>Alex · USA · 2026</span>
+            <span>#000001</span>
+          </div>
+          <div class="sentence-actions">
+            <button class="like-btn" id="likeBtn">♡ <span id="likeCount">128</span></button>
+            <button class="mini-btn" id="randomBtn">RANDOM</button>
+          </div>
+        </article>
+
+        <button class="primary big" data-go="write">SAY YOURS</button>
+      </div>
+
+      <footer class="footer">One sentence. Forever yours.</footer>
+    </section>
+
+    <section class="screen" id="write">
+      <header class="topbar">
+        <button class="back-btn" data-go="home">←</button>
+        <div class="brand">SAY YOURS</div>
+        <div class="spacer"></div>
+      </header>
+
+      <div class="form-wrap">
+        <p class="eyebrow">Your words. Your legacy.</p>
+        <h1>START NOW.</h1>
+
+        <label class="section-label" for="sentenceInput">YOUR SENTENCE</label>
+        <div class="input-panel">
+          <textarea id="sentenceInput" maxlength="150" placeholder="Write something worth keeping..."></textarea>
+          <div class="counter"><span id="charCount">0</span>/150</div>
+        </div>
+
+        <div class="section-label">MAKE IT YOURS</div>
+        <div class="grid">
+          <input id="nameInput" type="text" maxlength="40" placeholder="Name or nickname" />
+          <input id="countryInput" type="text" maxlength="40" placeholder="Country" />
+          <input id="yearInput" type="number" min="1900" max="2100" placeholder="Year (optional)" />
+        </div>
+
+        <div class="section-label">TAGS <span class="optional">(OPTIONAL · MAX 3)</span></div>
+        <input id="tagsInput" type="text" maxlength="80" placeholder="life, love, football" />
+
+        <button class="secondary inspiration" id="inspireBtn">NEED INSPIRATION</button>
+        <button class="primary big" id="publishBtn">PUBLISH</button>
+
+        <p class="fineprint">You can write in any language. Your sentence will stay exactly as you wrote it.</p>
+      </div>
+    </section>
+
+    <section class="screen" id="checkout">
+      <header class="topbar">
+        <button class="back-btn" data-go="write">←</button>
+        <div class="brand">SAY YOURS</div>
+        <div class="spacer"></div>
+      </header>
+
+      <div class="checkout-wrap">
+        <p class="eyebrow">Make it permanent.</p>
+        <div class="price">US$1</div>
+        <p class="checkout-copy">Just 1 dollar to be a poet.</p>
+
+        <div class="preview-card">
+          <p id="checkoutSentence">Your sentence will appear here.</p>
+          <span id="checkoutAuthor">Anonymous</span>
+        </div>
+
+        <button class="pay-button apple" id="applePayBtn"> Pay</button>
+        <button class="pay-button google" id="googlePayBtn">G Pay</button>
+        <button class="pay-button paypal" id="paypalBtn">PayPal</button>
+
+        <p class="fineprint">Demo checkout for now. Real payments will be connected later.</p>
+      </div>
+    </section>
+
+    <section class="screen" id="success">
+      <header class="topbar">
+        <div class="brand">SAY YOURS</div>
+        <button class="ghost-link" data-go="home">HOME</button>
+      </header>
+
+      <div class="success-wrap">
+        <p class="eyebrow">IT’S YOURS!</p>
+        <div class="success-quote">“</div>
+        <p class="success-sentence" id="successSentence"></p>
+        <div class="success-meta" id="successMeta"></div>
+        <div class="permanent-number" id="permanentNumber">#000000</div>
+
+        <div class="share-row">
+          <button class="secondary" id="copyBtn">COPY LINK</button>
+          <button class="primary" id="anotherBtn">SAY ANOTHER</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
