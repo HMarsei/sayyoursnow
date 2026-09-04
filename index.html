@@ -1,57 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#06162F" />
-  <meta name="description" content="SAY YOURS — Say your sentence NOW!!!" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06172e">
+  <meta name="description" content="SAY YOURS — Say your sentence NOW!!!">
   <title>SAY YOURS — Say your sentence NOW!!!</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main id="app">
     <section class="screen active" id="home">
-      <header class="topbar">
-        <div class="brand">SAY YOURS</div>
-        <button class="ghost-link" data-go="write">SAY YOURS</button>
-      </header>
-
-      <div class="home-wrap">
-        <p class="eyebrow">Say your sentence NOW!!!</p>
-
-        <article class="sentence-card">
-          <div class="quote-mark">“</div>
-          <p class="hero-sentence" id="homeSentence">
-            Life gets interesting when you stop waiting for permission.
-          </p>
-          <div class="sentence-meta">
-            <span>Alex · USA · 2026</span>
-            <span>#000001</span>
-          </div>
-          <div class="sentence-actions">
-            <button class="like-btn" id="likeBtn">♡ <span id="likeCount">128</span></button>
-            <button class="mini-btn" id="randomBtn">RANDOM</button>
-          </div>
-        </article>
-
-        <button class="primary big" data-go="write">SAY YOURS</button>
-      </div>
-
-      <footer class="footer">One sentence. Forever yours.</footer>
+<div class="page">
+<header class="top"><nav class="tabs"><a class="active">Trending</a><a>Most Loved</a><a>New</a><a>Funny</a><a>Wisdom</a><a>Legacy</a><a>Random</a></nav><div class="search">Search a name, phrase or # <span>⌕</span></div></header>
+<section class="hero">
+<div class="hero-title">
+      <div class="line1">Say your sentence</div>
+      <div class="now-wrap">
+      <span class="now-left-rays" aria-hidden="true"><i></i><i></i><i></i></span>
+      <div class="now-row" aria-label="NOW!!!"><span class="now-text">NOW</span><span class="bang-svg-group" aria-hidden="true">
+<span class="bang-svg"><svg viewBox="0 0 48 145"><path d="M14 7 L39 4 L29 99 L7 105 Z" fill="#19bfff"></path><ellipse cx="17" cy="127" rx="10" ry="12" fill="#19bfff"></ellipse></svg></span>
+<span class="bang-svg"><svg viewBox="0 0 48 145"><path d="M13 8 L38 5 L30 100 L8 106 Z" fill="#19bfff"></path><ellipse cx="18" cy="128" rx="10" ry="12" fill="#19bfff"></ellipse></svg></span>
+<span class="bang-svg"><svg viewBox="0 0 48 145"><path d="M15 6 L40 5 L29 101 L7 106 Z" fill="#19bfff"></path><ellipse cx="18" cy="128" rx="10" ry="12" fill="#19bfff"></ellipse></svg></span>
+</span>
+      </div></div>
+      <svg class="now-swoosh" viewBox="0 0 520 42" aria-hidden="true">
+        <path d="M18 31 C145 8 318 4 496 15 C421 13 328 19 259 24 C167 31 93 36 18 31Z" fill="#19bfff" opacity=".96"></path>
+        <path d="M60 34 C165 18 315 13 458 19" fill="none" stroke="#19bfff" stroke-width="2.8" stroke-linecap="round"></path>
+      </svg>
+    </div>
+<div class="quote-zone"><button class="circ">‹</button><div class="feature"><span class="feature-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><div class="qmark">“</div><div class="feature-text" id="homeSentence">“Be kind. Nobody knows<br>what the hell they’re doing.”</div><div class="feature-meta"><span class="cyan">Marta</span><i>•</i><span>Spain</span><i>•</i><span>2026</span><i>•</i><span class="lime">#00347281</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span></div><div class="likes">♥ <span id="likeCount">52,341</span></div><div class="dots"><b></b><b class="on"></b><b></b></div></div><button class="circ">›</button></div>
+<div class="prompt-block">
+      <div class="question">What will <span>you</span> say to the world?</div>
+      <svg class="prompt-arrow" viewBox="0 0 95 58" aria-hidden="true">
+        <path d="M8 8 C8 35 32 46 72 44" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"></path>
+        <path d="M62 35 L74 44 L62 53" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </div>
+    <div class="cta-row">
+      <button class="say" data-go="write">SAY YOURS <span class="chat-symbol"><svg class="svg-chat-round" viewBox="0 0 48 48" aria-hidden="true">
+  <circle cx="24" cy="22" r="16" fill="none" stroke="currentColor" stroke-width="3"></circle>
+  <path d="M14 36l-5 7 9-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+  <circle cx="18" cy="22" r="2.1" fill="currentColor"></circle>
+  <circle cx="24" cy="22" r="2.1" fill="currentColor"></circle>
+  <circle cx="30" cy="22" r="2.1" fill="currentColor"></circle>
+</svg></span></button>
+      <span class="cta-rays" aria-hidden="true"><i></i><i></i><i></i></span>
+    </div>
+</section>
+<section class="world"><h2>THE PEOPLE IS SAYING:</h2><div class="filters"><button class="sel">🔥 Trending</button><button>♡ Most Loved</button><button>✣ New</button><button>😄 Funny</button><button>◉ Wisdom</button><button>♧ Legacy</button><button>⬡ Random</button></div>
+<div class="cards">
+<article><span class="bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><p>Never trust a fart<br>after 60.</p><div class="m">Peter <i>•</i> UK <i>•</i> 2026</div><footer><span class="lime">#00347210</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><span class="cyan">♥ <b>84,391</b></span></footer></article>
+<article><span class="bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><p>I hope my grandchildren<br>know how much I wanted<br>them to exist.</p><div class="m">Maria <i>•</i> Italy <i>•</i> 2026</div><footer><span class="lime">#00347211</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><span class="cyan">♥ <b>31,209</b></span></footer></article>
+<article><span class="bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><p>Diego, I never liked<br>your lasagna.</p><div class="m">Anonymous <i>•</i> Argentina <i>•</i> 2026</div><footer><span class="lime">#00347212</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><span class="cyan">♥ <b>19,844</b></span></footer></article>
+<article><span class="bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><p>Work is important,<br>but so is not dying.</p><div class="m">Alex <i>•</i> Canada <i>•</i> 2026</div><footer><span class="lime">#00347213</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><span class="cyan">♥ <b>16,532</b></span></footer></article>
+<article><span class="bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><p>To my kids: travel more<br>than I did.</p><div class="m">Jorge <i>•</i> Chile <i>•</i> 2026</div><footer><span class="lime">#00347214</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><span class="cyan">♥ <b>27,891</b></span></footer></article>
+<article><span class="bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><p>If you’re reading this in 2126,<br>I hope we figured out how to<br>be nicer to each other.</p><div class="m">Someone from the past <i>•</i> Earth <i>•</i> 2026</div><footer><span class="lime">#00347215</span><span class="mini-bookmark"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><span class="cyan">♥ <b>45,672</b></span></footer></article>
+</div><button class="view">VIEW MORE <span class="view-arrow">⌄</span></button></section>
+<section class="steps"><div class="legacy">SAY IT.<br>LEAVE IT.<br><span class="be">BE</span> <span class="remembered">REMEMBERED.</span></div><div class="step"><div class="icon pen"><svg class="svg-step" viewBox="0 0 48 48" aria-hidden="true"><path d="m10 36 3-10L31 8l9 9-18 18zM13 26l9 9M28 11l9 9" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linejoin="round"></path></svg></div><div><b>1. You say it</b><small>Write your sentence<br>(max 150 characters).</small></div></div><div class="arrowthin">→</div><div class="step"><div class="icon lock"><svg class="svg-step" viewBox="0 0 48 48" aria-hidden="true"><rect x="10" y="21" width="28" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.7"></rect><path d="M16 21v-6a8 8 0 0 1 16 0v6M24 29v5" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linecap="round"></path></svg></div><div><b>2. We save it</b><small>It gets a permanent number<br>and lives here forever.</small></div></div><div class="arrowthin">→</div><div class="step"><div class="icon heart"><svg class="svg-heart" viewBox="0 0 48 44" aria-hidden="true"><path d="M24 40 7.5 24.8C-2 16 3.2 3 14 3c5 0 8.2 2.7 10 5.6C25.8 5.7 29 3 34 3c10.8 0 16 13 6.5 21.8z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"></path></svg></div><div><b>3. The world remembers</b><small>Others read it, like it<br>and share it.</small></div></div></section>
+<section class="stats"><div><span class="ico chat-ico"><svg class="svg-chat" viewBox="0 0 48 42" aria-hidden="true"><path d="M5 5h38v25H19l-9 7v-7H5z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"></path><circle cx="17" cy="18" r="2.2" fill="currentColor"></circle><circle cx="24" cy="18" r="2.2" fill="currentColor"></circle><circle cx="31" cy="18" r="2.2" fill="currentColor"></circle></svg></span><b>1,284,392</b><small>Things said forever</small></div><div><span class="ico globe-ico lime"><svg class="svg-globe" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="2.5"></circle><ellipse cx="24" cy="24" rx="8.5" ry="19" fill="none" stroke="currentColor" stroke-width="2"></ellipse><path d="M5 24h38M9 14h30M9 34h30" fill="none" stroke="currentColor" stroke-width="2"></path></svg></span><b>193</b><small>Countries</small></div><div><span class="ico cyan heart-ico"><svg class="svg-heart" viewBox="0 0 48 44" aria-hidden="true"><path d="M24 40 7.5 24.8C-2 16 3.2 3 14 3c5 0 8.2 2.7 10 5.6C25.8 5.7 29 3 34 3c10.8 0 16 13 6.5 21.8z" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linejoin="round"></path></svg></span><b>12,847,591</b><small>Likes given</small></div><div><span class="ico lime stat-flag"><svg class="svg-bookmark" viewBox="0 0 24 32" aria-hidden="true"><path d="M4 3h16v25l-8-5-8 5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"></path></svg></span><b>#00347281</b><small>Your number could be next</small></div></section>
+<footer class="footer"><div>About</div><div>FAQ</div><div>Rules</div><div>Privacy</div><div>Contact</div><span class="social">
+<svg viewBox="0 0 24 24" aria-label="Instagram"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"></rect><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"></circle></svg>
+<svg viewBox="0 0 24 24" aria-label="X">
+      <path d="M4.2 3.5h4.2l4.6 6.1 5.2-6.1h1.6l-6 7 6 8h-4.2l-4.9-6.5-5.5 6.5H3.6l6.3-7.3z" fill="currentColor"></path>
+    </svg>
+<svg viewBox="0 0 24 24" aria-label="TikTok"><path d="M14 4v10.2a4.2 4.2 0 1 1-3.3-4.1" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path><path d="M14 4c1.2 2.4 2.7 3.8 5 4.3" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>
+<svg viewBox="0 0 24 24" aria-label="Facebook">
+      <circle cx="12" cy="12" r="10" fill="currentColor"></circle>
+      <path d="M13.8 20v-7h2.4l.4-3h-2.8V8.3c0-.9.3-1.5 1.6-1.5h1.5V4.1c-.5-.1-1.4-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4V10H8.3v3h2.4v7z" fill="#06172f"></path>
+    </svg>
+</span><small>© 2026 Say Yours Forever. All rights reserved.</small></footer>
+</div>
     </section>
 
-    <section class="screen" id="write">
-      <header class="topbar">
-        <button class="back-btn" data-go="home">←</button>
-        <div class="brand">SAY YOURS</div>
-        <div class="spacer"></div>
+    <section class="screen app-screen" id="write">
+      <header class="app-topbar">
+        <button class="app-back" data-go="home">←</button>
+        <div class="app-brand">SAY YOURS</div>
+        <div class="app-spacer"></div>
       </header>
-
       <div class="form-wrap">
-        <p class="eyebrow">Your words. Your legacy.</p>
+        <p class="app-eyebrow">Your words. Your legacy.</p>
         <h1>START NOW.</h1>
 
         <label class="section-label" for="sentenceInput">YOUR SENTENCE</label>
@@ -61,31 +90,30 @@
         </div>
 
         <div class="section-label">MAKE IT YOURS</div>
-        <div class="grid">
-          <input id="nameInput" type="text" maxlength="40" placeholder="Name or nickname" />
-          <input id="countryInput" type="text" maxlength="40" placeholder="Country" />
-          <input id="yearInput" type="number" min="1900" max="2100" placeholder="Year (optional)" />
+        <div class="input-grid">
+          <input id="nameInput" type="text" maxlength="40" placeholder="Name or nickname">
+          <input id="countryInput" type="text" maxlength="40" placeholder="Country">
+          <input id="yearInput" type="number" min="1900" max="2100" placeholder="Year (optional)">
         </div>
 
         <div class="section-label">TAGS <span class="optional">(OPTIONAL · MAX 3)</span></div>
-        <input id="tagsInput" type="text" maxlength="80" placeholder="life, love, football" />
+        <input id="tagsInput" type="text" maxlength="80" placeholder="life, love, football">
 
-        <button class="secondary inspiration" id="inspireBtn">NEED INSPIRATION</button>
-        <button class="primary big" id="publishBtn">PUBLISH</button>
+        <button class="app-secondary inspiration" id="inspireBtn">NEED INSPIRATION</button>
+        <button class="app-primary app-big" id="publishBtn">PUBLISH</button>
 
         <p class="fineprint">You can write in any language. Your sentence will stay exactly as you wrote it.</p>
       </div>
     </section>
 
-    <section class="screen" id="checkout">
-      <header class="topbar">
-        <button class="back-btn" data-go="write">←</button>
-        <div class="brand">SAY YOURS</div>
-        <div class="spacer"></div>
+    <section class="screen app-screen" id="checkout">
+      <header class="app-topbar">
+        <button class="app-back" data-go="write">←</button>
+        <div class="app-brand">SAY YOURS</div>
+        <div class="app-spacer"></div>
       </header>
-
       <div class="checkout-wrap">
-        <p class="eyebrow">Make it permanent.</p>
+        <p class="app-eyebrow">Make it permanent.</p>
         <div class="price">US$1</div>
         <p class="checkout-copy">Just 1 dollar to be a poet.</p>
 
@@ -97,27 +125,24 @@
         <button class="pay-button apple" id="applePayBtn"> Pay</button>
         <button class="pay-button google" id="googlePayBtn">G Pay</button>
         <button class="pay-button paypal" id="paypalBtn">PayPal</button>
-
         <p class="fineprint">Demo checkout for now. Real payments will be connected later.</p>
       </div>
     </section>
 
-    <section class="screen" id="success">
-      <header class="topbar">
-        <div class="brand">SAY YOURS</div>
-        <button class="ghost-link" data-go="home">HOME</button>
+    <section class="screen app-screen" id="success">
+      <header class="app-topbar">
+        <div class="app-brand">SAY YOURS</div>
+        <button class="app-home-link" data-go="home">HOME</button>
       </header>
-
       <div class="success-wrap">
-        <p class="eyebrow">IT’S YOURS!</p>
+        <p class="app-eyebrow">IT’S YOURS!</p>
         <div class="success-quote">“</div>
         <p class="success-sentence" id="successSentence"></p>
         <div class="success-meta" id="successMeta"></div>
         <div class="permanent-number" id="permanentNumber">#000000</div>
-
         <div class="share-row">
-          <button class="secondary" id="copyBtn">COPY LINK</button>
-          <button class="primary" id="anotherBtn">SAY ANOTHER</button>
+          <button class="app-secondary" id="copyBtn">COPY LINK</button>
+          <button class="app-primary" id="anotherBtn">SAY ANOTHER</button>
         </div>
       </div>
     </section>

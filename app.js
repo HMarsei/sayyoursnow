@@ -1,4 +1,5 @@
 const screens = [...document.querySelectorAll(".screen")];
+
 const goTo = (id) => {
   screens.forEach(s => s.classList.toggle("active", s.id === id));
   window.scrollTo({ top: 0, behavior: "instant" });
@@ -15,7 +16,7 @@ const countryInput = document.getElementById("countryInput");
 const yearInput = document.getElementById("yearInput");
 const tagsInput = document.getElementById("tagsInput");
 
-sentenceInput.addEventListener("input", () => {
+sentenceInput?.addEventListener("input", () => {
   charCount.textContent = sentenceInput.value.length;
 });
 
@@ -27,14 +28,14 @@ const inspirations = [
   "Say less. Mean more."
 ];
 
-document.getElementById("inspireBtn").addEventListener("click", () => {
+document.getElementById("inspireBtn")?.addEventListener("click", () => {
   const idea = inspirations[Math.floor(Math.random() * inspirations.length)];
   sentenceInput.value = idea;
   charCount.textContent = idea.length;
   sentenceInput.focus();
 });
 
-document.getElementById("publishBtn").addEventListener("click", () => {
+document.getElementById("publishBtn")?.addEventListener("click", () => {
   const sentence = sentenceInput.value.trim();
   if (!sentence) {
     sentenceInput.focus();
@@ -55,7 +56,6 @@ function finishDemoPayment() {
   const name = nameInput.value.trim() || "Anonymous";
   const country = countryInput.value.trim() || "Somewhere";
   const year = yearInput.value.trim() || new Date().getFullYear();
-
   const number = String(Math.floor(Math.random() * 999999) + 1).padStart(6, "0");
 
   document.getElementById("successSentence").textContent = sentence;
@@ -63,17 +63,22 @@ function finishDemoPayment() {
   document.getElementById("permanentNumber").textContent = `#${number}`;
 
   localStorage.setItem("sayyours:last", JSON.stringify({
-    sentence, name, country, year, tags: tagsInput.value.trim(), number
+    sentence,
+    name,
+    country,
+    year,
+    tags: tagsInput.value.trim(),
+    number
   }));
 
   goTo("success");
 }
 
-["applePayBtn", "googlePayBtn", "paypalBtn"].forEach(id => {
-  document.getElementById(id).addEventListener("click", finishDemoPayment);
+["applePayBtn","googlePayBtn","paypalBtn"].forEach(id => {
+  document.getElementById(id)?.addEventListener("click", finishDemoPayment);
 });
 
-document.getElementById("anotherBtn").addEventListener("click", () => {
+document.getElementById("anotherBtn")?.addEventListener("click", () => {
   sentenceInput.value = "";
   nameInput.value = "";
   countryInput.value = "";
@@ -83,35 +88,13 @@ document.getElementById("anotherBtn").addEventListener("click", () => {
   goTo("write");
 });
 
-document.getElementById("copyBtn").addEventListener("click", async () => {
+document.getElementById("copyBtn")?.addEventListener("click", async () => {
+  const btn = document.getElementById("copyBtn");
   try {
     await navigator.clipboard.writeText(window.location.href);
-    document.getElementById("copyBtn").textContent = "COPIED!";
-    setTimeout(() => document.getElementById("copyBtn").textContent = "COPY LINK", 1400);
+    btn.textContent = "COPIED!";
+    setTimeout(() => btn.textContent = "COPY LINK", 1400);
   } catch {
     alert("Copy this address: " + window.location.href);
   }
-});
-
-let likes = 128;
-document.getElementById("likeBtn").addEventListener("click", () => {
-  likes += 1;
-  document.getElementById("likeCount").textContent = likes;
-});
-
-const randomSentences = [
-  "Life gets interesting when you stop waiting for permission.",
-  "A quiet decision can change a loud life.",
-  "Nothing lasts forever. That is why today matters.",
-  "You are allowed to become someone you never planned to be.",
-  "Some memories are really just places we can no longer visit."
-];
-
-document.getElementById("randomBtn").addEventListener("click", () => {
-  const el = document.getElementById("homeSentence");
-  let next = randomSentences[Math.floor(Math.random() * randomSentences.length)];
-  if (next === el.textContent.trim() && randomSentences.length > 1) {
-    next = randomSentences[(randomSentences.indexOf(next) + 1) % randomSentences.length];
-  }
-  el.textContent = next;
 });
