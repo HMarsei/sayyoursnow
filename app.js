@@ -44,7 +44,6 @@ document.getElementById("publishBtn").addEventListener("click", () => {
   const name = nameInput.value.trim() || "Anonymous";
   const country = countryInput.value.trim() || "Somewhere";
   const year = yearInput.value.trim() || new Date().getFullYear();
-
   document.getElementById("checkoutSentence").textContent = sentence;
   document.getElementById("checkoutAuthor").textContent = `${name} · ${country} · ${year}`;
   goTo("checkout");
@@ -55,7 +54,6 @@ function finishDemoPayment() {
   const name = nameInput.value.trim() || "Anonymous";
   const country = countryInput.value.trim() || "Somewhere";
   const year = yearInput.value.trim() || new Date().getFullYear();
-
   const number = String(Math.floor(Math.random() * 999999) + 1).padStart(6, "0");
 
   document.getElementById("successSentence").textContent = sentence;
@@ -93,25 +91,14 @@ document.getElementById("copyBtn").addEventListener("click", async () => {
   }
 });
 
-let likes = 128;
-document.getElementById("likeBtn").addEventListener("click", () => {
-  likes += 1;
-  document.getElementById("likeCount").textContent = likes;
-});
-
-const randomSentences = [
-  "Life gets interesting when you stop waiting for permission.",
-  "A quiet decision can change a loud life.",
-  "Nothing lasts forever. That is why today matters.",
-  "You are allowed to become someone you never planned to be.",
-  "Some memories are really just places we can no longer visit."
-];
-
-document.getElementById("randomBtn").addEventListener("click", () => {
-  const el = document.getElementById("homeSentence");
-  let next = randomSentences[Math.floor(Math.random() * randomSentences.length)];
-  if (next === el.textContent.trim() && randomSentences.length > 1) {
-    next = randomSentences[(randomSentences.indexOf(next) + 1) % randomSentences.length];
+/* Messages from the isolated Master Final HOME */
+window.addEventListener("message", (event) => {
+  if (!event.data || typeof event.data !== "object") return;
+  if (event.data.type === "sayyours-go-write") goTo("write");
+  if (event.data.type === "sayyours-height") {
+    const frame = document.getElementById("masterFrame");
+    if (frame && Number(event.data.height) > 0) {
+      frame.style.height = `${Math.ceil(event.data.height)}px`;
+    }
   }
-  el.textContent = next;
 });
