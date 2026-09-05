@@ -1023,3 +1023,28 @@
   .form-wrap{padding-top:18px;}
   .app-screen textarea{font-size:21px;min-height:150px;}
 }
+
+/* =========================================================
+   FINAL MOBILE MICRO-FIX — ONLY NOW RAYS + PROMPT ARROW
+   ========================================================= */
+@media(max-width:760px){
+  .now-left-rays{
+    left:calc(50% - 145px)!important;
+    top:12px!important;
+    transform:scale(.42)!important;
+    transform-origin:right center!important;
+  }
+
+  .prompt-block{
+    padding-left:48px!important;
+    margin-top:17px!important;
+    margin-bottom:6px!important;
+  }
+
+  .prompt-arrow{
+    left:4px!important;
+    top:2px!important;
+    width:44px!important;
+    height:38px!important;
+  }
+}
